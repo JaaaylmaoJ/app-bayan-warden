@@ -1,0 +1,54 @@
+version: '3.7'
+
+services:
+  app.banyan.nginx:
+    restart: always
+    image: nginx:alpine
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    tty: true
+    ports:
+      - "8081:80"
+
+  app.bayanbot.php:
+    restart: always
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+      - ./docker/php/conf.d/php-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+#      - ~/.ssh:/home/www-data/.ssh:ro
+    tty: true
+
+  app.bayanbot.mysql:
+    restart: always
+    image: mysql
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+      - /docker/mysql/data:/var/lib/mysql
+    tty: true
+    ports:
+      - "3308:3306"
+
+  app.bayanbot.rabbitmq:
+    restart: always
+    image: rabbitmq:management
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+    tty: true
+    ports:
+      - "15672:15672"
