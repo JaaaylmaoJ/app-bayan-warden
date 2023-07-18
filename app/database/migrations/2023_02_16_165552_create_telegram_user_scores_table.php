@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('telegram_user_scores', function (Blueprint $table) {
             $table->id();
+            $table->integer('score');
+            $table->integer('chat_id');
+            $table->integer('user_id');
+            $table->string('context');
+            $table->text('description');
             $table->timestamps();
+
+            $table->foreign('context')->references('id')->on('score_context');
         });
     }
 

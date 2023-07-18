@@ -1,0 +1,7 @@
+//@no-log
+GET https://api.telegram.org/bot{{botToken}}/getUpdates
+###
+
+//@no-log
+GET https://api.telegram.org/bot{{botToken}}/sendMessage?chat_id=-1001940077524&text=Reply&reply_to_message_id=3
+###

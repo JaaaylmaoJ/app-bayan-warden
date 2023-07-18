@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V1\Bot\BayanWarden\SdkWebhookController;
+use App\Http\Controllers\Api\V1\Bot\BayanWarden\BotmanWebhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$botToken = config('telegram.bots.@BayanWardenBot.token');
+// $telegram = new Api($botToken);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post("/bot/bayan-warden/$botToken/sdk/webhook", [SdkWebhookController::class, 'index']);
+Route::post("/bot/bayan-warden/$botToken/botman/webhook", [BotmanWebhookController::class, 'index']);

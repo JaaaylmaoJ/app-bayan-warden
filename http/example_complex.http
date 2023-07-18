@@ -1,0 +1,334 @@
+//@no-log
+//@name Group image
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331729,
+    "message": {
+      "message_id": 7,
+      "from": {
+        "id": 1087968824,
+        "is_bot": true,
+        "first_name": "Group",
+        "username": "GroupAnonymousBot"
+      },
+      "author_signature": "nikialias",
+      "sender_chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "date": 1689623890,
+      "photo": [
+        {
+          "file_id": "AgACAgIAAx0Cc6M71AADB2S1nVLs4RdTm12sbKhD_PFYmIfNAALxyDEb80SwSTSWj9WPm9DtAQADAgADcwADLwQ",
+          "file_unique_id": "AQAD8cgxG_NEsEl4",
+          "file_size": 747,
+          "width": 90,
+          "height": 54
+        },
+        {
+          "file_id": "AgACAgIAAx0Cc6M71AADB2S1nVLs4RdTm12sbKhD_PFYmIfNAALxyDEb80SwSTSWj9WPm9DtAQADAgADbQADLwQ",
+          "file_unique_id": "AQAD8cgxG_NEsEly",
+          "file_size": 8629,
+          "width": 320,
+          "height": 192
+        },
+        {
+          "file_id": "AgACAgIAAx0Cc6M71AADB2S1nVLs4RdTm12sbKhD_PFYmIfNAALxyDEb80SwSTSWj9WPm9DtAQADAgADeAADLwQ",
+          "file_unique_id": "AQAD8cgxG_NEsEl9",
+          "file_size": 41222,
+          "width": 800,
+          "height": 481
+        },
+        {
+          "file_id": "AgACAgIAAx0Cc6M71AADB2S1nVLs4RdTm12sbKhD_PFYmIfNAALxyDEb80SwSTSWj9WPm9DtAQADAgADeQADLwQ",
+          "file_unique_id": "AQAD8cgxG_NEsEl-",
+          "file_size": 70719,
+          "width": 1280,
+          "height": 770
+        }
+      ]
+    }
+  }
+###
+
+//@no-log
+//@name Group repost with video and images
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+[
+  {
+    "update_id": 129331730,
+    "message": {
+      "message_id": 8,
+      "from": {
+        "id": 1087968824,
+        "is_bot": true,
+        "first_name": "Group",
+        "username": "GroupAnonymousBot"
+      },
+      "author_signature": "nikialias",
+      "sender_chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "date": 1689624602,
+      "text": "подпись у репосту"
+    }
+  },
+  {
+      "update_id": 129331731,
+      "message": {
+        "message_id": 9,
+        "from": {
+          "id": 1087968824,
+          "is_bot": true,
+          "first_name": "Group",
+          "username": "GroupAnonymousBot"
+        },
+        "author_signature": "nikialias",
+        "sender_chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "date": 1689624602,
+        "forward_from_chat": {
+          "id": -1001059815658,
+          "title": "Лентач",
+          "username": "lentachold",
+          "type": "channel"
+        },
+        "forward_from_message_id": 62552,
+        "forward_date": 1689624563,
+        "media_group_id": "13516996823537866",
+        "photo": [
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3MAAy8E",
+            "file_unique_id": "AQADf8kxG7i7sEl4",
+            "file_size": 986,
+            "width": 90,
+            "height": 40
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA20AAy8E",
+            "file_unique_id": "AQADf8kxG7i7sEly",
+            "file_size": 14309,
+            "width": 320,
+            "height": 144
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3gAAy8E",
+            "file_unique_id": "AQADf8kxG7i7sEl9",
+            "file_size": 67430,
+            "width": 800,
+            "height": 360
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3kAAy8E",
+            "file_unique_id": "AQADf8kxG7i7sEl-",
+            "file_size": 134027,
+            "width": 1280,
+            "height": 576
+          }
+        ],
+        "caption": "Самолет Cessna упал на ангар с людьми в польском селе Хрцинно — пять человек погибли, как минимум семеро пострадали, сообщает Polsat News со ссылкой на министра здравоохранения Польши Адама Воскресского."
+      }
+  },
+  {
+      "update_id": 129331732,
+      "message": {
+        "message_id": 10,
+        "from": {
+          "id": 1087968824,
+          "is_bot": true,
+          "first_name": "Group",
+          "username": "GroupAnonymousBot"
+        },
+        "author_signature": "nikialias",
+        "sender_chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "date": 1689624602,
+        "forward_from_chat": {
+          "id": -1001059815658,
+          "title": "Лентач",
+          "username": "lentachold",
+          "type": "channel"
+        },
+        "forward_from_message_id": 62553,
+        "forward_date": 1689624564,
+        "media_group_id": "13516996823537866",
+        "photo": [
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCmS1oBojeB728xkNtcPeH1oWTbmoAAKAyTEbuLuwSb57l9xoZR0JAQADAgADcwADLwQ",
+            "file_unique_id": "AQADgMkxG7i7sEl4",
+            "file_size": 1492,
+            "width": 90,
+            "height": 67
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCmS1oBojeB728xkNtcPeH1oWTbmoAAKAyTEbuLuwSb57l9xoZR0JAQADAgADbQADLwQ",
+            "file_unique_id": "AQADgMkxG7i7sEly",
+            "file_size": 20746,
+            "width": 320,
+            "height": 240
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADCmS1oBojeB728xkNtcPeH1oWTbmoAAKAyTEbuLuwSb57l9xoZR0JAQADAgADeAADLwQ",
+            "file_unique_id": "AQADgMkxG7i7sEl9",
+            "file_size": 61239,
+            "width": 680,
+            "height": 510
+          }
+        ]
+      }
+  },
+  {
+      "update_id": 129331733,
+      "message": {
+        "message_id": 11,
+        "from": {
+          "id": 1087968824,
+          "is_bot": true,
+          "first_name": "Group",
+          "username": "GroupAnonymousBot"
+        },
+        "author_signature": "nikialias",
+        "sender_chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "date": 1689624603,
+        "forward_from_chat": {
+          "id": -1001059815658,
+          "title": "Лентач",
+          "username": "lentachold",
+          "type": "channel"
+        },
+        "forward_from_message_id": 62554,
+        "forward_date": 1689624564,
+        "media_group_id": "13516996823537866",
+        "photo": [
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADC2S1oBqSWpQL5aQyJzKdPwpMjFwbAAKByTEbuLuwSdfQvI8qbp2IAQADAgADcwADLwQ",
+            "file_unique_id": "AQADgckxG7i7sEl4",
+            "file_size": 1603,
+            "width": 67,
+            "height": 90
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADC2S1oBqSWpQL5aQyJzKdPwpMjFwbAAKByTEbuLuwSdfQvI8qbp2IAQADAgADbQADLwQ",
+            "file_unique_id": "AQADgckxG7i7sEly",
+            "file_size": 28321,
+            "width": 240,
+            "height": 320
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADC2S1oBqSWpQL5aQyJzKdPwpMjFwbAAKByTEbuLuwSdfQvI8qbp2IAQADAgADeAADLwQ",
+            "file_unique_id": "AQADgckxG7i7sEl9",
+            "file_size": 155534,
+            "width": 600,
+            "height": 800
+          },
+          {
+            "file_id": "AgACAgIAAx0Cc6M71AADC2S1oBqSWpQL5aQyJzKdPwpMjFwbAAKByTEbuLuwSdfQvI8qbp2IAQADAgADeQADLwQ",
+            "file_unique_id": "AQADgckxG7i7sEl-",
+            "file_size": 169989,
+            "width": 675,
+            "height": 900
+          }
+        ]
+      }
+  },
+  {
+      "update_id": 129331734,
+      "message": {
+        "message_id": 12,
+        "from": {
+          "id": 1087968824,
+          "is_bot": true,
+          "first_name": "Group",
+          "username": "GroupAnonymousBot"
+        },
+        "author_signature": "nikialias",
+        "sender_chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "chat": {
+          "id": -1001940077524,
+          "title": "memodelnya",
+          "type": "supergroup"
+        },
+        "date": 1689624603,
+        "forward_from_chat": {
+          "id": -1001059815658,
+          "title": "Лентач",
+          "username": "lentachold",
+          "type": "channel"
+        },
+        "forward_from_message_id": 62555,
+        "forward_date": 1689624564,
+        "media_group_id": "13516996823537866",
+        "video": {
+          "duration": 46,
+          "width": 1280,
+          "height": 720,
+          "file_name": "ПОЛЬША 4.mp4",
+          "mime_type": "video/mp4",
+          "thumbnail": {
+            "file_id": "AAMCAgADHQJzozvUAAMMZLWgGhDlSyef71jmCs5uSNEW8wcAAqEsAAK4u7BJdZzkIFQtbuEBAAdtAAMvBA",
+            "file_unique_id": "AQADoSwAAri7sEly",
+            "file_size": 8010,
+            "width": 320,
+            "height": 180
+          },
+          "thumb": {
+            "file_id": "AAMCAgADHQJzozvUAAMMZLWgGhDlSyef71jmCs5uSNEW8wcAAqEsAAK4u7BJdZzkIFQtbuEBAAdtAAMvBA",
+            "file_unique_id": "AQADoSwAAri7sEly",
+            "file_size": 8010,
+            "width": 320,
+            "height": 180
+          },
+          "file_id": "BAACAgIAAx0Cc6M71AADDGS1oBoQ5Usnn-9Y5grObkjRFvMHAAKhLAACuLuwSXWc5CBULW7hLwQ",
+          "file_unique_id": "AgADoSwAAri7sEk",
+          "file_size": 4754345
+        }
+      }
+  }
+]
+###

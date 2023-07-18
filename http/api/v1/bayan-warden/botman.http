@@ -1,0 +1,39 @@
+//@no-log
+//@name Mention, Group command from anon with alias
+POST banyanbot.app.localhost:8081/api/v1/bot/bayan-warden/{{botToken}}/botman/webhook
+Content-Type: application/json
+
+{
+  "update_id": 129331727,
+  "message": {
+    "message_id": 5,
+    "from": {
+      "id": 1087968824,
+      "is_bot": true,
+      "first_name": "Group",
+      "username": "GroupAnonymousBot"
+    },
+    "author_signature": "nikialias",
+    "sender_chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "date": 1689623604,
+    "text": "/sri",
+    "entities": [
+      {
+        "offset": 0,
+        "length": 3,
+        "type": "bot_command"
+      }
+    ]
+  }
+}
+
+###

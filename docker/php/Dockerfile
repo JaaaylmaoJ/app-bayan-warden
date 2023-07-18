@@ -24,6 +24,7 @@ RUN install-php-extensions \
   #xml \
 
 RUN install-php-extensions pdo_mysql
+RUN install-php-extensions pdo_pgsql
 RUN install-php-extensions mysqli
 
 # Install composerred
@@ -40,9 +41,14 @@ RUN rm -rf /var/cache/apk/* \
 
 
 #COPY ./docker-entrypoint.sh /usr/local/bin/
-
 #RUN chmod 775 /usr/local/bin/docker-entrypoint.sh \
-# && ln -s     /usr/local/bin/docker-entrypoint.sh /
+#&& ln -s     /usr/local/bin/docker-entrypoint.sh /
+
+#RUN useradd -G www-data,root -u $uid -d /home/$user $user
+#RUN mkdir -p /home/$user/.composer && \
+ #   chown -R $user:$user /home/$user
+
+#USER $user
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php-fpm"]

@@ -1,0 +1,302 @@
+//@no-log
+//@name Simple Text
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+  "update_id": 129331715,
+  "message": {
+    "message_id": 5,
+    "from": {
+      "id": 393494657,
+      "is_bot": false,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "language_code": "ru"
+    },
+    "chat": {
+      "id": 393494657,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "type": "private"
+    },
+    "date": 1689622826,
+    "text": "asdfasdfasdf"
+  }
+}
+
+###
+
+//@no-log
+//@name Simple command
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+  "update_id": 129331716,
+  "message": {
+    "message_id": 6,
+    "from": {
+      "id": 393494657,
+      "is_bot": false,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "language_code": "ru"
+    },
+    "chat": {
+      "id": 393494657,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "type": "private"
+    },
+    "date": 1689622942,
+    "text": "/exampole_command",
+    "entities": [
+      {
+        "offset": 0,
+        "length": 17,
+        "type": "bot_command"
+      }
+    ]
+  }
+}
+
+###
+
+//@no-log
+//@name Mention, Group message
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331718,
+    "message": {
+      "message_id": 8,
+      "from": {
+        "id": 393494657,
+        "is_bot": false,
+        "first_name": "Nikiam",
+        "last_name": "Nikidant",
+        "username": "nikidant",
+        "language_code": "ru"
+      },
+      "chat": {
+        "id": -981556247,
+        "title": "memodelnya",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "date": 1689623070,
+      "text": "@BayanWardenBot hallo",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 15,
+          "type": "mention"
+        }
+      ]
+    }
+  }
+
+###
+
+//@no-log
+//@name Mention, Group command
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331719,
+    "message": {
+      "message_id": 9,
+      "from": {
+        "id": 393494657,
+        "is_bot": false,
+        "first_name": "Nikiam",
+        "last_name": "Nikidant",
+        "username": "nikidant",
+        "language_code": "ru"
+      },
+      "chat": {
+        "id": -981556247,
+        "title": "memodelnya",
+        "type": "group",
+        "all_members_are_administrators": true
+      },
+      "date": 1689623126,
+      "text": "@BayanWardenBot /simple_command",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 15,
+          "type": "mention"
+        },
+        {
+          "offset": 16,
+          "length": 15,
+          "type": "bot_command"
+        }
+      ]
+    }
+  }
+
+###
+
+//@no-log
+//@name Mention, Group command from anon
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331723,
+    "message": {
+      "message_id": 2,
+      "from": {
+        "id": 1087968824,
+        "is_bot": true,
+        "first_name": "Group",
+        "username": "GroupAnonymousBot"
+      },
+      "sender_chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "date": 1689623205,
+      "text": "@BayanWardenBot /make_smth",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 15,
+          "type": "mention"
+        },
+        {
+          "offset": 16,
+          "length": 10,
+          "type": "bot_command"
+        }
+      ]
+    }
+  }
+
+###
+
+//@no-log
+//@name Mention, Group message from anon with alias
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+  "update_id": 129331726,
+  "message": {
+    "message_id": 4,
+    "from": {
+      "id": 1087968824,
+      "is_bot": true,
+      "first_name": "Group",
+      "username": "GroupAnonymousBot"
+    },
+    "author_signature": "nikialias",
+    "sender_chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "date": 1689623496,
+    "text": "asdfasdfas"
+  }
+}
+
+###
+
+//@no-log
+//@name Mention, Group command from anon with alias
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331727,
+    "message": {
+      "message_id": 5,
+      "from": {
+        "id": 1087968824,
+        "is_bot": true,
+        "first_name": "Group",
+        "username": "GroupAnonymousBot"
+      },
+      "author_signature": "nikialias",
+      "sender_chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "date": 1689623604,
+      "text": "@BayanWardenBot /sri",
+      "entities": [
+        {
+          "offset": 0,
+          "length": 15,
+          "type": "mention"
+        },
+        {
+          "offset": 16,
+          "length": 4,
+          "type": "bot_command"
+        }
+      ]
+    }
+}
+
+###
+
+//@no-log
+//@name Mention, Group message from anon with alias
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+    "update_id": 129331728,
+    "message": {
+      "message_id": 6,
+      "from": {
+        "id": 1087968824,
+        "is_bot": true,
+        "first_name": "Group",
+        "username": "GroupAnonymousBot"
+      },
+      "author_signature": "nikialias",
+      "sender_chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "chat": {
+        "id": -1001940077524,
+        "title": "memodelnya",
+        "type": "supergroup"
+      },
+      "date": 1689623748,
+      "text": "alo"
+    }
+  }
+
+###

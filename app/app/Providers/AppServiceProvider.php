@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use BotMan\BotMan\BotManFactory;
+use BotMan\Drivers\Web\WebDriver;
 use Illuminate\Support\ServiceProvider;
+use BotMan\BotMan\Drivers\DriverManager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
     }
 
     /**
