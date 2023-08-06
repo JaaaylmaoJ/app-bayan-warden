@@ -4,11 +4,16 @@ namespace App\Http\Controllers\Api\V1\Bot\BayanWarden;
 
 use BotMan\BotMan\BotMan;
 use App\Http\Controllers\Controller;
+use BotMan\BotMan\Messages\Attachments\Image;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
+use BotMan\BotMan\Messages\Outgoing\OutgoingMessage;
 
 class BotmanWebhookController extends Controller
 {
     private Botman $botman;
+
+    private const IMG_GOSLYAROV = '/img/goslyarov.png';
+
     public function __construct()
     {
         $this->botman = resolve('botman');
@@ -21,9 +26,20 @@ class BotmanWebhookController extends Controller
         $botman->hears('/help', function (BotMan $bot) {
             $bot->reply(<<<HTML
 <b>/help</b> - список команд
-<b>/help</b> - список команд
-<b>/help</b> - список команд
+<b>/say</b> - список команд
+<b>/ping</b> - список команд
+<b>/sri</b> - список команд
 HTML);
+        });
+
+        $botman->hears('/say', function (BotMan $bot) {
+            $bot->reply(OutgoingMessage::create(attachment: new Image(
+                sprintf(
+                    '%s%s',
+                    config('app.url'),
+                    self::IMG_GOSLYAROV
+                )
+            )));
         });
 
         $botman->hears('/ping', function (BotMan $bot) {

@@ -24,7 +24,7 @@ class TelegramUpdateRepository implements TelegramUpdateRepositoryInterface
             TgMessage::ATTR_HAS_PHOTO        => isset($message['photo']),
             TgMessage::ATTR_HAS_VIDEO        => isset($message['video']),
             TgMessage::ATTR_IS_FORWARDED     => isset($message['forward_from_chat']),
-            TgMessage::ATTR_DATE             => date(DATE_RFC3339, $message),
+            TgMessage::ATTR_DATE             => date(DATE_RFC3339, $message['date']),
             TgMessage::ATTR_MESSAGE_BODY     => $message,
         ];
 

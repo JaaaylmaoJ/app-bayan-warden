@@ -25,7 +25,7 @@ Content-Type: application/json
       "type": "supergroup"
     },
     "date": 1689623604,
-    "text": "/sri",
+    "text": "/say",
     "entities": [
       {
         "offset": 0,
