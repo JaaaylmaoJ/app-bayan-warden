@@ -21,7 +21,7 @@ return new class extends Migration
             $table->bigInteger('from_id')->index();
             $table->bigInteger('sender_chat_id')->index()->nullable();
             $table->longText('text')->nullable();
-            $table->string('author_signature')->index();
+            $table->string('author_signature')->index()->nullable();
             $table->boolean('has_photo')->index();
             $table->boolean('has_video')->index();
             $table->boolean('is_forwarded')->index();
