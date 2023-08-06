@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('chats', function (Blueprint $table) {
+        Schema::create('tg_users', function (Blueprint $table) {
             $table->id();
-            $table->integer('tg_id');
-            $table->string('title');
-            $table->timestamps();
+            $table->bigInteger('tg_id')->unique();
+            $table->string('tg_username');
+            $table->string('local_name');
+            $table->timestampsTz();
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chats');
+        Schema::dropIfExists('tg_users');
     }
 };
