@@ -5,6 +5,7 @@ namespace App\Http\Middleware\Custom;
 use Closure;
 use Exception;
 use Illuminate\Http\Request;
+use App\Models\TgUnhandledUpdate;
 use Illuminate\Support\Facades\Log;
 use App\Services\Update\Repository\TelegramUpdateRepositoryInterface;
 
@@ -23,8 +24,11 @@ class LogWebhookUpdate
         try {
             $this->updateRepository->create($data);
         } catch(Exception $e) {
-            Log::debug(json_encode($data, JSON_UNESCAPED_UNICODE), [__METHOD__]);
-            throw $e;
+            Log::debug(implode("\n", [$e->getMessage(), json_encode($data, JSON_UNESCAPED_UNICODE)]), [__METHOD__]);
+            (new TgUnhandledUpdate([
+                TgUnhandledUpdate::ATTR_UPDATE_ID => $data['update_id'] ?? null,
+                TgUnhandledUpdate::ATTR_PAYLOAD   => $data,
+            ]))->save();
         }
 
 
