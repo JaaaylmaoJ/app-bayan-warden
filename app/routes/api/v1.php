@@ -23,6 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
-Route::post("/bot/bayan-warden/$botToken/sdk/webhook", [SdkWebhookController::class, 'index']);
-Route::post("/bot/bayan-warden/$botToken/botman/webhook", [BotmanWebhookController::class, 'index']);
+Route::group([
+    'middleware' => ['log.webhook']
+], function() use ($botToken) {
+    Route::post("/bot/bayan-warden/$botToken/sdk/webhook", [SdkWebhookController::class, 'index']);
+    Route::post("/bot/bayan-warden/$botToken/botman/webhook", [BotmanWebhookController::class, 'index']);
+});

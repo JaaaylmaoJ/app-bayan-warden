@@ -13,16 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('telegram_user_scores', function (Blueprint $table) {
+        Schema::create('tg_user_scores', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('tg_user_id');
+            $table->bigInteger('tg_chat_id');
             $table->integer('score');
-            $table->integer('chat_id');
-            $table->integer('user_id');
-            $table->string('context');
-            $table->text('description');
-            $table->timestamps();
+            $table->timestampsTz();
 
-            $table->foreign('context')->references('id')->on('score_context');
+            $table->foreign('tg_user_id')->references('tg_id')->on('tg_users');
+            $table->foreign('tg_chat_id')->references('tg_id')->on('tg_users');
         });
     }
 
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('telegram_user_scores');
+        Schema::dropIfExists('tg_user_scores');
     }
 };

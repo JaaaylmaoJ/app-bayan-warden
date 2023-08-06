@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7f4a9acf-1f94-44ec-b167-01ffac34e3e8" name="bayanbot jino vps">
+        <fileTransfer accessType="SFTP" host="7bfa19c4324f.vps.myjino.ru" port="49348" sshConfigId="19507d10-14cf-4793-a9b4-494b2e44fdbc" sshConfig="jino_vps_bayanbot">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

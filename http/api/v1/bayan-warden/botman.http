@@ -37,3 +37,140 @@ Content-Type: application/json
 }
 
 ###
+
+//@no-log
+//@name Forwarded_messsage_with_photo,
+POST banyanbot.app.localhost:8081/api/v1/bot/bayan-warden/{{botToken}}/botman/webhook
+Content-Type: application/json
+
+{
+  "update_id": 129331731,
+  "message": {
+    "message_id": 9,
+    "from": {
+      "id": 1087968824,
+      "is_bot": true,
+      "first_name": "Group",
+      "username": "GroupAnonymousBot"
+    },
+    "author_signature": "nikialias",
+    "sender_chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "date": 1689624602,
+    "forward_from_chat": {
+      "id": -1001059815658,
+      "title": "Лентач",
+      "username": "lentachold",
+      "type": "channel"
+    },
+    "forward_from_message_id": 62552,
+    "forward_date": 1689624563,
+    "media_group_id": "13516996823537866",
+    "photo": [
+      {
+        "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3MAAy8E",
+        "file_unique_id": "AQADf8kxG7i7sEl4",
+        "file_size": 986,
+        "width": 90,
+        "height": 40
+      },
+      {
+        "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA20AAy8E",
+        "file_unique_id": "AQADf8kxG7i7sEly",
+        "file_size": 14309,
+        "width": 320,
+        "height": 144
+      },
+      {
+        "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3gAAy8E",
+        "file_unique_id": "AQADf8kxG7i7sEl9",
+        "file_size": 67430,
+        "width": 800,
+        "height": 360
+      },
+      {
+        "file_id": "AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3kAAy8E",
+        "file_unique_id": "AQADf8kxG7i7sEl-",
+        "file_size": 134027,
+        "width": 1280,
+        "height": 576
+      }
+    ],
+    "caption": "Самолет Cessna упал на ангар с людьми в польском селе Хрцинно — пять человек погибли, как минимум семеро пострадали, сообщает Polsat News со ссылкой на министра здравоохранения Польши Адама Воскресского."
+  }
+}
+
+###
+
+//@no-log
+//@name Forwarded_messsage_with_video,
+POST banyanbot.app.localhost:8081/api/v1/bot/bayan-warden/{{botToken}}/botman/webhook
+Content-Type: application/json
+
+{
+  "update_id": 129331734,
+  "message": {
+    "message_id": 12,
+    "from": {
+      "id": 1087968824,
+      "is_bot": true,
+      "first_name": "Group",
+      "username": "GroupAnonymousBot"
+    },
+    "author_signature": "nikialias",
+    "sender_chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "chat": {
+      "id": -1001940077524,
+      "title": "memodelnya",
+      "type": "supergroup"
+    },
+    "date": 1689624603,
+    "forward_from_chat": {
+      "id": -1001059815658,
+      "title": "Лентач",
+      "username": "lentachold",
+      "type": "channel"
+    },
+    "forward_from_message_id": 62555,
+    "forward_date": 1689624564,
+    "media_group_id": "13516996823537866",
+    "video": {
+      "duration": 46,
+      "width": 1280,
+      "height": 720,
+      "file_name": "ПОЛЬША 4.mp4",
+      "mime_type": "video/mp4",
+      "thumbnail": {
+        "file_id": "AAMCAgADHQJzozvUAAMMZLWgGhDlSyef71jmCs5uSNEW8wcAAqEsAAK4u7BJdZzkIFQtbuEBAAdtAAMvBA",
+        "file_unique_id": "AQADoSwAAri7sEly",
+        "file_size": 8010,
+        "width": 320,
+        "height": 180
+      },
+      "thumb": {
+        "file_id": "AAMCAgADHQJzozvUAAMMZLWgGhDlSyef71jmCs5uSNEW8wcAAqEsAAK4u7BJdZzkIFQtbuEBAAdtAAMvBA",
+        "file_unique_id": "AQADoSwAAri7sEly",
+        "file_size": 8010,
+        "width": 320,
+        "height": 180
+      },
+      "file_id": "BAACAgIAAx0Cc6M71AADDGS1oBoQ5Usnn-9Y5grObkjRFvMHAAKhLAACuLuwSXWc5CBULW7hLwQ",
+      "file_unique_id": "AgADoSwAAri7sEk",
+      "file_size": 4754345
+    }
+  }
+}
+
+###
