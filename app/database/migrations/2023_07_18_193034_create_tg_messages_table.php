@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('message_id')->index();
             $table->bigInteger('chat_id')->index();
             $table->bigInteger('from_id')->index();
-            $table->bigInteger('sender_chat_id')->index();
+            $table->bigInteger('sender_chat_id')->index()->nullable();
             $table->longText('text')->nullable();
             $table->string('author_signature')->index();
             $table->boolean('has_photo')->index();

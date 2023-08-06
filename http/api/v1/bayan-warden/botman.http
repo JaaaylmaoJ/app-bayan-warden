@@ -1,4 +1,35 @@
 //@no-log
+//@name Simple message
+POST banyanbot.app.localhost:8081/api/v1/bot/bayan-warden/{{botToken}}/botman/webhook
+Content-Type: application/json
+
+{
+  "update_id": 129331715,
+  "message": {
+    "message_id": 5,
+    "from": {
+      "id": 393494657,
+      "is_bot": false,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "language_code": "ru"
+    },
+    "chat": {
+      "id": 393494657,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "type": "private"
+    },
+    "date": 1689622826,
+    "text": "asdfasdfasdf"
+  }
+}
+
+###
+
+//@no-log
 //@name Mention, Group command from anon with alias
 POST banyanbot.app.localhost:8081/api/v1/bot/bayan-warden/{{botToken}}/botman/webhook
 Content-Type: application/json
