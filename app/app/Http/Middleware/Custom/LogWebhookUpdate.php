@@ -3,7 +3,9 @@
 namespace App\Http\Middleware\Custom;
 
 use Closure;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Services\Update\Repository\TelegramUpdateRepositoryInterface;
 
 class LogWebhookUpdate
@@ -17,7 +19,15 @@ class LogWebhookUpdate
         $request->headers->set('Accept', 'application/json');
 
         $data = $request->all();
-        $this->updateRepository->create($data);
+
+        try {
+            $this->updateRepository->create($data);
+        } catch(Exception $e) {
+            Log::debug(json_encode($data, JSON_UNESCAPED_UNICODE), [__METHOD__]);
+            throw $e;
+        }
+
+
 
         return $next($request);
     }
