@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1\Bot\BayanWarden;
 
+use App\Models\TgUser;
 use BotMan\BotMan\BotMan;
 use App\Http\Controllers\Controller;
 use BotMan\BotMan\Messages\Attachments\Image;
@@ -29,10 +30,11 @@ class BotmanWebhookController extends Controller
 <b>/say</b> - список команд
 <b>/ping</b> - список команд
 <b>/sri</b> - список команд
+<b>/users</b> - список команд
 HTML);
         });
 
-        $botman->hears('/say', function (BotMan $bot) {
+        $botman->hears('/say [\s\S]*', function (BotMan $bot) {
             $bot->reply(OutgoingMessage::create(attachment: new Image(
                 sprintf(
                     '%s%s',
@@ -46,12 +48,22 @@ HTML);
             $bot->reply('da da ya');
         });
 
-        $botman->hears('/sri', function (BotMan $bot) {
+        $botman->hears('/users', function (BotMan $bot) {
+            $list = TgUser::all()->map(fn(TgUser $u) => sprintf("<b>@%s</b> - %s %s", $u->username, $u->first_name, $u->last_name));
+
+            $bot->reply(implode("\n", $list->all()));
+        });
+
+        $botman->hears('/zxc', function (BotMan $bot) {
             $user     = $bot->getUser();
             $messages = $bot->getMessages();
             /** @var IncomingMessage $message */
             $message = $messages[0];
             $signature = $message->getPayload()->get('author_signature');
+        });
+
+        $botman->hears('.* прив .*', function (BotMan $bot) {
+            $bot->reply('Bonjour');
         });
 
         $botman->hears('привет', function (BotMan $bot) {
