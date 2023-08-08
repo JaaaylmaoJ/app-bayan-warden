@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('update_id')->index()->nullable();
             $table->jsonb('payload');
-            $table->boolean('is_handled')->default(false);
-            $table->timestamps();
+            $table->timestampTz('handled_at')->nullable();
+            $table->timestampsTz();
         });
     }
 

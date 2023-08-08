@@ -24,7 +24,7 @@ class TgUnhandledUpdate extends Model
         ATTR_ID = 'id',
         ATTR_UPDATE_ID = 'update_id',
         ATTR_PAYLOAD = 'payload',
-        ATTR_IS_HANDLED = 'is_handled',
+        ATTR_HANDLED_AT = 'handled_at',
         ATTR_UPDATED_AT = 'updated_at',
         ATTR_CREATED_AT = 'created_at';
 
@@ -32,7 +32,7 @@ class TgUnhandledUpdate extends Model
         self::ATTR_UPDATE_ID,
         self::ATTR_PAYLOAD,
         self::ATTR_UPDATED_AT,
-        self::ATTR_IS_HANDLED,
+        self::ATTR_HANDLED_AT,
     ];
 
     protected $casts = [

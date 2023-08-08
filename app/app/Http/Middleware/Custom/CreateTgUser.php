@@ -27,9 +27,8 @@ class CreateTgUser
     {
         $data = $request->all();
 
-        DB::transaction(function() use ($data) {
-            $message = $this->messageRepository->findOne([TgMessage::ATTR_UPDATE_ID => $data['update_id']]);
-
+        $message = $this->messageRepository->findOne([TgMessage::ATTR_UPDATE_ID => $data['update_id']]);
+        $message && DB::transaction(function() use ($message, $data) {
             $user = $this->userRepository->createFromMessage($message);
             $chat = $this->chatRepository->createFromMessage($message);
 

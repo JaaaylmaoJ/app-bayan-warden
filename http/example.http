@@ -26,6 +26,37 @@ Content-Type: application/json
     "text": "asdfasdfasdf"
   }
 }
+###
+
+//@no-log
+//@name Simple edited text
+POST banyanbot.app.localhost:8081/botman
+Content-Type: application/json
+
+{
+  "update_id": 129331798,
+  "edited_message": {
+    "message_id": 75,
+    "from": {
+      "id": 393494657,
+      "is_bot": false,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "language_code": "ru"
+    },
+    "chat": {
+      "id": 393494657,
+      "first_name": "Nikiam",
+      "last_name": "Nikidant",
+      "username": "nikidant",
+      "type": "private"
+    },
+    "date": 1691507473,
+    "edit_date": 1691507476,
+    "text": "asdfasdfvzxcvzxcv"
+  }
+}
 
 ###
 
