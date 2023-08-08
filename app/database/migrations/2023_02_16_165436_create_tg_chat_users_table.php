@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,8 @@ return new class extends Migration
             $table->bigInteger('chat_id');
             $table->bigInteger('user_id');
             $table->string('author_signature')->nullable();
-            $table->timestampsTz();
+            $table->timestampTz('created_at')->nullable()->useCurrent();
+            $table->timestampTz('updated_at')->nullable()->useCurrent();
 
             $table->unique(['chat_id', 'user_id', 'author_signature']);
             $table->foreign('chat_id')->references('id')->on('tg_chats')->cascadeOnDelete()->cascadeOnUpdate();
