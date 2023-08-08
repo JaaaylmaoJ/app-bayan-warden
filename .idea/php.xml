@@ -138,12 +138,20 @@
       <path value="$PROJECT_DIR$/app/vendor/botman/driver-web" />
       <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/app/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/app/vendor/phpowermove/docblock" />
+      <path value="$PROJECT_DIR$/app/vendor/phootwork/collection" />
+      <path value="$PROJECT_DIR$/app/vendor/phootwork/lang" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/romanzipp/laravel-model-doc" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/dbal" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="77b8ec6d-996e-4f8a-b5f8-4b0f01e347d6" name="app.bayanbot.php" home="docker-compose://DATA" debugger_id="php.debugger.XDebug">
-        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="app.bayanbot.php" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
+      <interpreter id="77b8ec6d-996e-4f8a-b5f8-4b0f01e347d6" name="app.bayanbot.php" home="docker-compose://DATA" false="false" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_COMPOSE_SERVICE_NAME="app.bayanbot.php" DOCKER_REMOTE_PROJECT_PATH="/opt/project">
           <type_data command="EXEC" />
           <dockerComposeConfigurationPaths>
             <item value="$PROJECT_DIR$/docker-compose.yml" />

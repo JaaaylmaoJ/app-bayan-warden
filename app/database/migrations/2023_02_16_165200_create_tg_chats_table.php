@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('tg_chats', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('tg_id');
-            $table->string('title');
+            $table->string('title')->nullable();
+            $table->string('type');
             $table->timestampsTz();
         });
     }

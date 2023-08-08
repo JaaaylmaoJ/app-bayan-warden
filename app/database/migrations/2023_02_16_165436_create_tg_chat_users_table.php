@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('chat_id');
             $table->bigInteger('user_id');
-            $table->string('user_alias')->nullable();
+            $table->string('author_signature')->nullable();
             $table->timestampsTz();
 
+            $table->unique(['chat_id', 'user_id', 'author_signature']);
             $table->foreign('chat_id')->references('id')->on('tg_chats')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('user_id')->references('id')->on('tg_users')->cascadeOnDelete()->cascadeOnUpdate();
         });

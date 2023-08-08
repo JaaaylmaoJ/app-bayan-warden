@@ -16,8 +16,11 @@ return new class extends Migration
         Schema::create('tg_users', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('tg_id')->unique();
-            $table->string('tg_username');
-            $table->string('local_name');
+            $table->string('username');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->boolean('is_bot');
+            $table->string('local_name')->nullable();
             $table->timestampsTz();
         });
     }

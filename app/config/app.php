@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use App\Providers\App\RepositoryServiceProvider;
+use romanzipp\ModelDoc\Providers\ModelDocServiceProvider;
 
 return [
 
@@ -189,6 +190,7 @@ return [
 
         BotMan\BotMan\BotManServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        ModelDocServiceProvider::class,
 
         /*
          * Application Service Providers...

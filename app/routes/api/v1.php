@@ -24,7 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group([
-    'middleware' => ['log.webhook']
+    'middleware' => [
+        'log.webhook',
+        'tg_user.create',
+    ]
 ], function() use ($botToken) {
     Route::post("/bot/bayan-warden/$botToken/sdk/webhook", [SdkWebhookController::class, 'index']);
     Route::post("/bot/bayan-warden/$botToken/botman/webhook", [BotmanWebhookController::class, 'index']);

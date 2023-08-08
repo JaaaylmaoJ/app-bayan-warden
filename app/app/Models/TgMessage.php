@@ -2,26 +2,30 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property int     $id
- * @property int     $update_id
- * @property int     $message_id
- * @property int     $chat_id
- * @property int     $from_id
- * @property string  $text
- * @property string  $author_signature
- * @property int     $sender_chat_id
- * @property string  $caption
- * @property boolean $has_photo
- * @property boolean $has_video
- * @property boolean $is_forwarded
- * @property string  $date
- * @property array   $message_body
- * @property string  $updated_at
- * @property string  $created_at
+ * @mixin \Illuminate\Database\Query\Builder
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ *
+ * @property int $id
+ * @property int $update_id
+ * @property int $message_id
+ * @property int $chat_id
+ * @property int $from_id
+ * @property int|null $sender_chat_id
+ * @property string|null $text
+ * @property string|null $author_signature
+ * @property bool $has_photo
+ * @property bool $has_video
+ * @property bool $is_forwarded
+ * @property string|null $caption
+ * @property mixed $date
+ * @property array $message_body
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  */
 class TgMessage extends Model
 {

@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class TelegramUpdateRepository implements TelegramUpdateRepositoryInterface
 {
+    public function findOne($filter): ?TgMessage
+    {
+        $message = TgMessage::where($filter)->get()->first();
+        return $message;
+    }
+
     public function create(array $args): TgMessage
     {
         $message = $args['message'];
