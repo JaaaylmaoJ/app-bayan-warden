@@ -30,6 +30,18 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/phpowermove/docblock" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/romanzipp/laravel-model-doc" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/backpack/basset" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/backpack/crud" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/creativeorange/gravatar" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/horizon" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/flysystem-local" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/prologue/alerts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/backpack/generators" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/backpack/theme-tabler" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/ui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

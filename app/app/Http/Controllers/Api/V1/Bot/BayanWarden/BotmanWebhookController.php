@@ -27,10 +27,9 @@ class BotmanWebhookController extends Controller
         $botman->hears('/help', function (BotMan $bot) {
             $bot->reply(<<<HTML
 <b>/help</b> - список команд
-<b>/say</b> - список команд
-<b>/ping</b> - список команд
-<b>/sri</b> - список команд
-<b>/users</b> - список команд
+<b>/say что-нибудь</b> - список команд
+<b>/ping</b> - пингануть бота
+<b>/users</b> - список сохраненных пользователей
 HTML);
         });
 
