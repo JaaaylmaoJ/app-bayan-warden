@@ -30,7 +30,7 @@ RUN install-php-extensions mysqli
 # Install composerred
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
-    --version=2.0.14 \
+    --version=2.5.8 \
     --install-dir=/usr/bin
 
 RUN install-php-extensions xdebug
@@ -39,6 +39,9 @@ RUN install-php-extensions xdebug
 RUN rm -rf /var/cache/apk/* \
  && rm -rf /tmp/*
 
+RUN docker-php-ext-configure pcntl --enable-pcntl \
+  && docker-php-ext-install \
+    pcntl
 
 #COPY ./docker-entrypoint.sh /usr/local/bin/
 #RUN chmod 775 /usr/local/bin/docker-entrypoint.sh \

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
+use App\Providers\HorizonServiceProvider;
 use App\Providers\App\RepositoryServiceProvider;
 use romanzipp\ModelDoc\Providers\ModelDocServiceProvider;
 
@@ -84,7 +85,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -191,6 +192,8 @@ return [
         BotMan\BotMan\BotManServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         ModelDocServiceProvider::class,
+        Backpack\Basset\BassetServiceProvider::class,
+        Backpack\CRUD\BackpackServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -199,6 +202,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\HorizonServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
         RepositoryServiceProvider::class

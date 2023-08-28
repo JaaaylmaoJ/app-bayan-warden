@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\Bot\BayanWarden\SdkWebhookController;
 use App\Http\Controllers\Api\V1\Bot\BayanWarden\BotmanWebhookController;
@@ -22,6 +23,8 @@ $botToken = config('telegram.bots.@BayanWardenBot.token');
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/sort', [Controller::class, 'sort']);
 
 Route::group([
     'middleware' => [
