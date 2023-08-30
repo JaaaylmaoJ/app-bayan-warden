@@ -1,0 +1,5 @@
+GET https://api.telegram.org/bot{{botToken}}/getFile?file_id=AgACAgIAAx0Cc6M71AADCWS1oBoBKo1ulYuCsbH8AAEsNNecvwACf8kxG7i7sEm_YWnwzULqZAEAAwIAA3gAAy8E
+
+###
+
+GET https://api.telegram.org/file/bot{{botToken}}/photos/file_6

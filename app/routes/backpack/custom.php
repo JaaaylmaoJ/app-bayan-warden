@@ -21,4 +21,6 @@ Route::group([
     Route::crud('jobs', 'JobsCrudController');
     Route::crud('user', 'UserCrudController');
     Route::crud('tg-unhandled-update', 'TgUnhandledUpdateCrudController');
+    Route::crud('tg-message-photo', 'TgMessagePhotoCrudController');
+    Route::crud('tg-message-video', 'TgMessageVideoCrudController');
 }); // this should be the absolute last line of this file

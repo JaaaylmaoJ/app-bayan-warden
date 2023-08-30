@@ -43,7 +43,11 @@ HTML);
             )));
         });
 
-        $botman->hears('/ping', function (BotMan $bot) {
+        $botman->receivesImages(function (BotMan $bot) {;
+            $files = $bot->getMessage()->getFiles();
+        });
+
+        $botman->hears('/ping', function (BotMan $bot) {;
             $bot->reply('da da ya');
         });
 
